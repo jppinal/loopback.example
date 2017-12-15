@@ -1,0 +1,34 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "datastore.db"
+  },
+  "openlibrary": {
+    "name": "openlibrary",
+    "baseURL": "http://openlibrary.org/",
+    "crud": false,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "search": [
+            "q"
+          ]
+        },
+        "template": {
+          "method": "GET",
+          "url": "http://openlibrary.org/search.json",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "query": {
+            "q": "{q}"
+          },
+          "responsePath": "$.*"
+        }
+      }
+    ]
+  }
+}

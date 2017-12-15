@@ -1,0 +1,34 @@
+{
+  "name": "Wishlist",
+  "plural": "Wishlist",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cover_edition_key": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": [
+        "string"
+      ]
+    },
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
